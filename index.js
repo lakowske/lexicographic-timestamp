@@ -5,6 +5,19 @@
 var through    = require('through');
 var sprintf    = require('sprintf-js').sprintf;
 
+function timestampStream(decimalPlaces, keyName) {
+
+    var stamper = lexicographicTimestamp(decimalPlaces, keyName, Date.now);
+
+    return through(function(object) {
+
+        stamper(object);
+
+        this.queue(object);
+    })
+
+}
+
 /*
  * Create a timestamp and store it on the object with the given keyName.
  * The timestamp is a string in milliseconds with given number of decimalPlaces.
@@ -13,31 +26,6 @@ var sprintf    = require('sprintf-js').sprintf;
  * 1.002, 1.003, etc...)
  * When run on a server, the decimal places are filled with values from the more precise clock.
  */
-function timestampStream(decimalPlaces, keyName) {
-
-    var lastMillisecond = Date.now();
-    var counter         = 0;
-
-    return through(function(object) {
-        var now = Date.now();
-
-        if (now === lastMillisecond) {
-            counter++;
-        } else {
-            counter = 0;
-        }
-
-        lastMillisecond = now;
-
-        var lexTimestamp = constructTimestamp(now, counter, decimalPlaces);
-
-        object[keyName] = lexTimestamp;
-
-        this.queue(object);
-    })
-
-}
-
 function lexicographicTimestamp(decimalPlaces, keyName, time) {
 
     var lastMillisecond = Date.now();

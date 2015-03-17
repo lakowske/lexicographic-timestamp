@@ -51,3 +51,12 @@ test('can mock the time', function(t) {
 
     t.end();
 })
+
+test('verify assumptions about lexicographic comparison', function(t) {
+    t.ok('1.001' > '1.000')
+    t.notOk('1.000' > '1.000')
+    t.ok('2.000' > '1.000');
+    t.ok('1.000' > '0.000');
+    t.ok('10.000' > '2.000');
+    t.end();
+})
