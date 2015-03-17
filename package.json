@@ -1,0 +1,33 @@
+{
+  "name": "lexicographic-timestamp",
+  "version": "0.0.1",
+  "description": "Adds lexicographically sortable timestamps to objects",
+  "main": "index.js",
+  "dependencies": {
+    "sprintf-js": "^1.0.2",
+    "tape": "^3.5.0",
+    "through": "^2.3.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lakowske/lexicographic-timestamp.git"
+  },
+  "keywords": [
+    "timestamp",
+    "lexicographical",
+    "sortable",
+    "sort",
+    "level",
+    "leveldb"
+  ],
+  "author": "Seth Lakowske <lakowske@gmail.com> (http://sethlakowske.com/)",
+  "license": "BSD3",
+  "bugs": {
+    "url": "https://github.com/lakowske/lexicographic-timestamp/issues"
+  },
+  "homepage": "https://github.com/lakowske/lexicographic-timestamp"
+}
