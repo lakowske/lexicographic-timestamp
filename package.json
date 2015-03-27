@@ -5,7 +5,6 @@
   "main": "index.js",
   "dependencies": {
     "sprintf-js": "^1.0.2",
-    "tape": "^3.5.0",
     "through": "^2.3.6"
   },
   "devDependencies": {
