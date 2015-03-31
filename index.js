@@ -25,7 +25,6 @@ function timestampStream(numberPlaces, decimalPlaces, keyName) {
  *
  * When run in the browser and multiple objects are received in a single
  * millisecond, the decimal place counts up (e.g. 1.001, 1.002, 1.003, etc...)
- * When run on a server, the decimal places are filled with values from the more precise clock.
  */
 function lexicographicTimestamp(numberPlaces, decimalPlaces, keyName, time) {
 
