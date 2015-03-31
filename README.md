@@ -1,4 +1,4 @@
-Add lexicographically sortable timestamps to objects
+Adds lexicographically sortable timestamps to objects.
 
 The following example places timestamps on objects.  The object will have a key named 'key' and its value will be a lexicographically sortable timestamp.
 
