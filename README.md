@@ -22,4 +22,4 @@ Streams the following to stdout
 {"value":"hello wisconsin","key":"0001427769510483.000000000"}
 ```
 
-Notice the integer part has 16 characters with leading zeros and the fractional part has 9 characters.  This format would allow sortable references going back to the 1970s.
+Notice the integer part has 16 characters with leading zeros and the fractional part has 9 characters.  This format allows sortable references dating back to the 1970s.
